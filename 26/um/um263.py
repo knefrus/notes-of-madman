@@ -1,4 +1,4 @@
-f = open('um263.txt')
+f = open('files/um263.txt')
 n, m, k = map(int, f.readline().split())
 #n - занято
 #m - ряды

@@ -1,6 +1,6 @@
 import math as m
 
-f = open('264.txt')
+f = open('files/264.txt')
 k = int(f.readline()) #kol-vo
 
 poz = [int(i) for i in f] #vse

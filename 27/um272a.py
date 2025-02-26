@@ -1,7 +1,7 @@
 from idlelib.squeezer import count_lines_with_wrapping
 from xxsubtype import bench
 
-f = open('27A272.txt')
+f = open('files/27A272.txt')
 f.readline()
 
 points = [ list(map(float, s.replace(',', '.').split())) for s in f]

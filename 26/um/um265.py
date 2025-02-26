@@ -1,4 +1,4 @@
-f = open('265.txt')
+f = open('files/265.txt')
 m = int(f.readline()) #zanyatih
 places = [[m] * 100] #ЗАМЕНИТЬ НА 100001
 

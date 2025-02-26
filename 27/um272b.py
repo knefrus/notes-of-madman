@@ -1,4 +1,4 @@
-f = open('27B272.txt')
+f = open('files/27B272.txt')
 f.readline()
 
 points = [list(map(float, s.replace(',','.').split())) for s in f]

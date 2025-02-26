@@ -1,7 +1,7 @@
 #n занятых
 #m рядов
 #k мест
-f = open('um262.txt')
+f = open('files/um262.txt')
 n, m, k = map(int, f.readline().split())
 
 menfo = [[] for i in  range(k+1)]
