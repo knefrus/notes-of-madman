@@ -1,0 +1,2 @@
+def proverka(s):
+    povtor = []
