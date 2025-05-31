@@ -38,8 +38,7 @@
 
 ####B####
 import math
-from ctypes import PyDLL
-from xml.sax.handler import property_xml_string
+
 
 f = open('files/276b.txt')
 f.readline()
@@ -75,3 +74,4 @@ py = sum([y for x, y in best]) / len(best)
 pxy = int((px + py) * 10_000)
 ps = int(sum([len(i) / 16 for i in clusters]) * 1000)
 print(pxy, ps)
+
