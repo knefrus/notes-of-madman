@@ -1,26 +1,28 @@
-import math
-f = open('files/287.txt')
-f.readline()
-p = [list(map(float, s.replace(',','.').split())) for s in f]
+from math import *
 k = 2
-cl = [[] for _ in range(k)]
-b = [[] for _ in range(k)]
+data = []
+for s in open('files/287.txt'):
+    x,y = [float(d) for d in s.replace(',','.').split()]
+    data.append([x,y])
 
-for x, y in p:
-    if x < -2:
-        cl[0].append([x, y])
-    else:
-        cl[1].append([x, y])
-for n in range(k):
-    md = 10 ** 10
-    for p1 in cl[n]:
-        sd = 0
-        for p2 in cl[n]:
-            sd += math.dist(p1, p2)
-        if sd < md:
-            md = sd
-            b[n] = p1
+cl = []
+while data:
+    prob = [data.pop()]
+    for p in prob:
+        ss = [p1 for p1 in data if dist(p1, p)<1]
+        for p1 in ss:
+            prob.append(p1)
+            data.remove(p1)
+    if len(prob) > 30:
+        cl.append(prob)
 
-Px = abs(int(sum([x for x, y in b]) / k * 10000))
-Py = abs(int(sum([y for x, y in b]) / k * 10000))
-print(Px, Py)
+print([len(q1) for q1 in cl])
+
+def pl(cl1):
+    m = []
+    k = len(cl1)
+    for p in cl1:
+        for p1 in cl1:
+            if dist(p1, p) <= 1:
+                k +=1
+        m.append()
